@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Layout</title>
+  <style>/* Universal selector */
+    * {
+      margin: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    
+    /* Element selector */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    
+    /* Class selector */
+    .main-header, .main-footer {
+      background-color:green;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    
+    .nav-list {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      background-color:green;
+    }
+    
+    .nav-item {
+      margin: 0 15px;
+      padding: 10px;
+      color: red;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    
+    /* Hover pseudo-class */
+    .nav-item:hover {
+      background-color:green;
+      border-radius: 5px;
+    }
+    
+    /* ID selector */
+    #intro {
+      background-color: red;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    
+    /* Pseudo-class for first child */
+    #intro p:first-child {
+      font-weight: bold;
+    }
+    
+    /* Descendant selector */
+    main section ul li {
+      margin: 10px 0;
+    }
+    
+    /* Grouping selectors */
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    
+    /* Attribute selectors (optional) */
+    a[href] {
+      color: blue;
+      text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+  <header class="main-header">VIRAT KITCHEN</header>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item">Home</li>
+      <li class="nav-item">About</li>
+      <li class="nav-item">Services</li>
+      <li class="nav-item">Contact</li>
+    </ul>
+  </nav>
+  <main>
+    <section id="intro">
+      <h1>my name is virat</h1>
+      <p class="highlight">Best items</p>
+    </section>
+    <section>
+      <h2>Items</h2>
+      <ul>
+        <li>Biryani</li>
+        <li>pottato curry </li>
+        <li>kaju paneer</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="main-footer">personal details</footer>
+</body>
+</html>
